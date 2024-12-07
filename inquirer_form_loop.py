@@ -29,7 +29,7 @@ def crea_doc():
     return
 
 def create_inquirer():
-    docs =  glob.glob('./Doduments/*.docx')
+    docs =  glob.glob('./Documents/*.docx')
     l = len(docs)
     #return print(l)
     all_choices = []

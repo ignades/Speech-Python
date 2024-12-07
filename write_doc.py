@@ -1,13 +1,14 @@
-import docx
+
 import re
+import os
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import RGBColor
 
 def write_documento(name_doc,testo):
     try:
-        doc = Document(name_doc)
-        print(name_doc)
+        #print(name_doc)
+        doc = Document()
 
         if "punto a capo" in testo:
              xx = testo.replace("punto a capo",".")
@@ -30,17 +31,14 @@ def write_documento(name_doc,testo):
 
         run.font.color.rgb = RGBColor(0x42, 0x24, 0xE9)
 
-        run.font.size = docx.shared.Pt(12)
+        #run.font.size = docx.shared.Pt(12)
 
+        doc.save("./Documents/"+name_doc)
 
     except():
         print("Could not request results")
 
 
 
-    doc.save("./Documents/"+name_doc)
-    print("Documento! ok")
 
-
-
-#write_doc("pippo.docx","prova primo paragrafo virgola altro testo punto a capo")
+#write_documento("Optimus.docx","RE TEST virgola altro testo punto a capo")
