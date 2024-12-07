@@ -105,7 +105,7 @@ while(1):
         name_doc = crea_doc()
     elif text=="scrivi":
         doc_to_edit = create_inquirer()
-        doc_edit = doc_to_edit.replace("./", "")
+        doc_edit = doc_to_edit.replace("./Documents/", "")
         testo = record_text()
         write_documento(doc_edit,testo)
     elif text == "esci":
